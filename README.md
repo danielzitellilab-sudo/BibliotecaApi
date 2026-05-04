@@ -15,12 +15,14 @@ API RESTful para la gestión de libros de biblioteca, desarrollada en .NET 8 con
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
 - SQL Server o SQL Server LocalDB (incluido con Visual Studio)
 
+> ⚠️ **Nota**: este proyecto requiere SQL Server o SQL Server LocalDB para ejecutarse. No es compatible con GitHub Codespaces sin configuración adicional.
+
 ## Configuración y ejecución
 
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU_USUARIO/BibliotecaApi.git
+git clone https://github.com/danielzitellilab-sudo/BibliotecaApi.git
 cd BibliotecaApi
 ```
 
@@ -99,7 +101,7 @@ curl http://localhost:5000/api/libros
 
 - `Titulo`: requerido, máximo 200 caracteres
 - `Autor`: requerido, máximo 100 caracteres
-- `ISBN`: requerido, formato `XXX-XXXXX-XXXXXXX-X`
+- `ISBN`: requerido, formato ISBN-13 estándar (ej: `978-0-132-35088-4`)
 - `AnioPublicacion`: rango entre 1000 y 2100
 
 ## Pruebas unitarias
